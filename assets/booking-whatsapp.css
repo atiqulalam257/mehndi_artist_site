@@ -1,0 +1,72 @@
+/* ===== WHATSAPP BOOKING BUTTON — phone pehle (360px), phir desktop ===== */
+.wa-booking {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  min-height: 48px;
+  margin-top: 14px;
+  padding: 12px 20px;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #FFFFFF;
+  background: #25D366;
+  border: none;
+  border-radius: 12px;
+  text-decoration: none;
+  box-shadow: 0 2px 12px rgba(0,0,0,.18);
+  transition: transform .18s ease, opacity .18s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.wa-booking:hover,
+.wa-booking:focus-visible {
+  opacity: .92;
+  transform: translateY(-1px);
+  outline: none;
+}
+
+.wa-booking:active {
+  transform: scale(.98);
+}
+
+.wa-booking svg {
+  flex: 0 0 auto;
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+}
+
+.wa-booking-note {
+  margin: 10px 0 0;
+  font-size: 14px;
+  color: var(--muted);
+  text-align: center;
+}
+
+/* Desktop: button apni chaudai me center */
+@media (min-width: 720px) {
+  .wa-booking {
+    width: auto;
+    min-width: 260px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+}
+
+/* Reduced motion respect */
+@media (prefers-reduced-motion: reduce) {
+  .wa-booking {
+    transition: none;
+  }
+  .wa-booking:hover,
+  .wa-booking:focus-visible,
+  .wa-booking:active {
+    transform: none;
+  }
+}

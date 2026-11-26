@@ -1,0 +1,48 @@
+<!-- BOOKING -->
+<section class="section booking" id="booking">
+  <div class="section-head">
+    <p class="eyebrow">Booking</p>
+    <h2>Apni <span class="accent-text">date</span> pakki karein</h2>
+    <p class="section-lead booking-note">Form bharein ya seedha WhatsApp par message karein. Main jald hi aapse baat karungi.</p>
+  </div>
+
+  <form class="booking-form" id="bookingForm" novalidate>
+    <div class="form-row">
+      <label for="bName">Aapka naam <span class="req">*</span></label>
+      <input type="text" id="bName" name="name" autocomplete="name" required placeholder="Jaise: Riya Sharma">
+    </div>
+
+    <div class="form-row">
+      <label for="bPhone">Phone / WhatsApp <span class="req">*</span></label>
+      <input type="tel" id="bPhone" name="phone" autocomplete="tel" required placeholder="10 digit number">
+    </div>
+
+    <div class="form-row">
+      <label for="bService">Service</label>
+      <select id="bService" name="service">
+        <option value="">Chunein</option>
+        <option>Dulhan Mehndi</option>
+        <option>Festive Mehndi</option>
+        <option>Engagement & Sangeet</option>
+      </select>
+    </div>
+
+    <div class="form-row">
+      <label for="bDate">Kis din chahiye?</label>
+      <input type="date" id="bDate" name="date">
+    </div>
+
+    <div class="form-row">
+      <label for="bMsg">Koi khaas baat</label>
+      <textarea id="bMsg" name="message" rows="3" placeholder="Design ki pasand, jagah, ya koi sawaal"></textarea>
+    </div>
+
+    <p class="form-error" id="bookingError" role="alert" hidden></p>
+
+    <div class="form-actions">
+      <button type="submit" class="btn btn-primary">Booking Request Bhejein</button>
+      <a class="btn btn-whatsapp" id="waLink" href="https://wa.me/910000000000" target="_blank" rel="noopener">WhatsApp par Baat Karein</a>
+    </div>
+    <p class="form-status" id="bookingStatus" role="status" hidden></p>
+  </form>
+</section>

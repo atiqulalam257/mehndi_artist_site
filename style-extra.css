@@ -1,0 +1,67 @@
+/* ===== PORTFOLIO GALLERY — responsive grid ===== */
+.gallery-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(2, 1fr);
+}
+@media (min-width: 720px) {
+  .gallery-grid { grid-template-columns: repeat(3, 1fr); gap: 20px; }
+}
+@media (min-width: 1000px) {
+  .gallery-grid { grid-template-columns: repeat(4, 1fr); }
+}
+
+.gallery-item:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* tap pe bhi caption dikhe (touch devices) */
+.gallery-item.is-active .gallery-img { transform: scale(1.04); filter: saturate(1.1); }
+.gallery-item.is-active figcaption { opacity: 1; transform: translateY(0); }
+
+/* ===== ABOUT ME — accent palette ke saath ===== */
+.about-points li::before {
+  background: var(--accent);
+}
+.about-text p:first-child {
+  font-size: 17px;
+  color: var(--text);
+}
+.about-art {
+  padding: 12px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 40%, #F7E3E7, transparent 70%);
+}
+
+/* ===== SERVICES — card ka accent aur hover ===== */
+.service-card {
+  border-top: 3px solid var(--accent-soft);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 22px rgba(59,47,42,.14);
+}
+.service-card h3 {
+  font-size: 20px;
+  color: var(--accent);
+}
+.service-meta {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: #F7E3E7;
+  color: var(--text);
+  font-size: 13px;
+}
+
+/* ===== Reduced motion respect ===== */
+@media (prefers-reduced-motion: reduce) {
+  .gallery-img,
+  .gallery-item figcaption,
+  .service-card,
+  .btn,
+  .main-nav { transition: none; }
+}

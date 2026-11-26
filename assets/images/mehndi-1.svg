@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Mehndi design placeholder">
+  <rect width="400" height="400" fill="#F7E3E7"/>
+  <g fill="none" stroke="#C98A97" stroke-width="3" stroke-linecap="round">
+    <circle cx="200" cy="200" r="120"/>
+    <circle cx="200" cy="200" r="80"/>
+    <circle cx="200" cy="200" r="40"/>
+    <path d="M200 80 Q230 140 200 200 Q170 140 200 80Z"/>
+    <path d="M200 320 Q230 260 200 200 Q170 260 200 320Z"/>
+    <path d="M80 200 Q140 170 200 200 Q140 230 80 200Z"/>
+    <path d="M320 200 Q260 170 200 200 Q260 230 320 200Z"/>
+  </g>
+</svg>
