@@ -50,6 +50,7 @@
     "WhatsApp Image 2026-11-27 at 5.59.02 PM (1).jpeg",
     "WhatsApp Image 2026-11-27 at 5.59.02 PM.jpeg"
   ];
+  var homePageCount = 9;
   var isPortfolioPage = document.body.dataset.page === "portfolio";
   var galleryGrid = document.querySelector(".gallery-grid");
 
@@ -71,7 +72,7 @@
   }
 
   if (galleryGrid) {
-    var visibleImages = isPortfolioPage ? portfolioImages.slice(8) : portfolioImages.slice(0, 8);
+    var visibleImages = isPortfolioPage ? portfolioImages.slice(homePageCount) : portfolioImages.slice(0, homePageCount);
     galleryGrid.replaceChildren.apply(galleryGrid, visibleImages.map(makeGalleryItem));
 
     var gallerySection = galleryGrid.closest(".gallery");
@@ -148,7 +149,7 @@
       var date = bookingForm.querySelector('[name="date"]');
       var missing = [];
       if (!name || !name.value.trim()) missing.push("naam");
-      if (!phone || !/^[0-9+\\-\\s]{8,15}$/.test(phone.value.trim())) missing.push("sahi phone number");
+      if (!phone || !/^[0-9+\-\s]{8,15}$/.test(phone.value.trim())) missing.push("sahi phone number");
       if (!date || !date.value) missing.push("tareekh");
       if (missing.length) {
         showError(bookingStatus, "Kripya bharein: " + missing.join(", "));
