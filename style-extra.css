@@ -32,3 +32,8 @@
 @media (min-width: 720px) {
   .about-art { min-height: 420px; }
 }
+
+/* Keep the View All button separated from the last portfolio row. */
+.gallery-actions {
+  margin-top: 24px;
+}
