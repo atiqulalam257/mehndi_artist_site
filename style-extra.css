@@ -1,6 +1,34 @@
-/* Gallery action button spacing */
-.gallery-actions {
-  display: flex;
-  justify-content: center;
-  margin-top: 28px;
+/* ===== REAL PHOTO HERO BANNER ===== */
+.hero {
+  isolation: isolate;
+  color: #fff;
+}
+.hero-art { display: none; }
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(90deg, rgba(38, 22, 18, .72), rgba(38, 22, 18, .24)),
+    url("assets/images/WhatsApp%20Image%202026-11-27%20at%205.56.18%20PM.jpeg") center 48% / cover no-repeat;
+}
+.hero .eyebrow,
+.hero h1,
+.hero-lead { color: #fff; }
+.hero .accent-text { color: #f2d9a8; }
+.hero .btn-ghost { border-color: #fff; color: #fff; }
+
+/* ===== REAL PHOTO IN ABOUT SECTION ===== */
+.about-art {
+  min-height: 340px;
+  padding: 0;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: url("assets/images/WhatsApp%20Image%202026-11-27%20at%205.56.30%20PM.jpeg") center / cover no-repeat;
+  box-shadow: var(--shadow);
+}
+.about-art .about-svg { display: none; }
+@media (min-width: 720px) {
+  .about-art { min-height: 420px; }
 }
